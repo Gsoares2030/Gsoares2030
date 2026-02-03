@@ -1,7 +1,7 @@
 # Hi there 👋, I'm Gonçalo Soares
 
 🎓 Master's student in **Software Engineering** at **Universidade do Minho**, Braga, Portugal  
-💻 Currently specializing in **Cybersecurity** and **Next Generation Networks** 
+💻 Currently specializing in **Cybersecurity** and **Next Generation Networks** <br />
 🌐 Primary interests: **Computer networks and cybersecurity**
 
 ---
