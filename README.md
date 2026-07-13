@@ -17,22 +17,23 @@
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="35"/>
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="35"/>
     </td>
   </tr>
-
   <tr>
     <td><b>Web & Backend</b></td>
   </tr>
   <tr>
     <td>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="35"/>
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/svelte/svelte-original.svg" width="35"/>
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/prisma/prisma-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="35"/>
     </td>
   </tr>
-
   <tr>
     <td><b>DevOps & Cloud</b></td>
   </tr>
@@ -43,6 +44,7 @@
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" width="35"/>
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" width="35"/>
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" width="35"/>
     </td>
   </tr>
 </table>
@@ -51,7 +53,7 @@
 
 ### 🏆 Featured Projects
 
-#### ✈️ AirTrail: Cloud-Native Flight Tracker
+#### AirTrail: Cloud-Native Flight Tracker
 **Focus:** Cloud Computing, DevOps, Scalability  
 A full-stack web application migrated to a microservices architecture on **Google Cloud Platform (GCP)**. The system allows users to track flight history and view interactive statistics.
 
@@ -60,7 +62,7 @@ A full-stack web application migrated to a microservices architecture on **Googl
 * **Performance Engineering:** Conducted load testing (500+ concurrent requests) using **JMeter**, optimizing CPU/Memory usage by scaling from 1 to 3 pods.
 * **Tech Stack:** `TypeScript` `Svelte` `Node.js` `PostgreSQL` `Docker` `Kubernetes` `Ansible` `GCP`
 
-#### 📺 Over-the-Top (OTT) Multimedia Service
+#### Over-the-Top (OTT) Multimedia Service
 **Focus:** Network Engineering, Protocol Design, Python  
 Designed and implemented a custom **Overlay Network** to support efficient real-time multimedia streaming (video/audio) over a physical underlay network.
 
@@ -69,7 +71,7 @@ Designed and implemented a custom **Overlay Network** to support efficient real-
 * **Resilience:** Implemented automatic failure recovery and dynamic route optimization using ADV/JOIN control messages.
 * **Tech Stack:** `Python` `TCP/IP` `Socket Programming` `Multicast Routing` `Overlay Networks`
 
-#### 📡 MPLS Traffic Engineering & QoS
+#### MPLS Traffic Engineering & QoS
 **Focus:** Network Infrastructure, Routing Protocols, High Availability  
 Designed and validated a resilient **MPLS Core Network** topology capable of advanced traffic manipulation and service differentiation.
 
@@ -78,7 +80,7 @@ Designed and validated a resilient **MPLS Core Network** topology capable of adv
 * **High Availability:** Engineered fault tolerance using Fast Reroute (FRR) and backup tunnels, ensuring zero packet loss during link failures.
 * **Tech Stack:** `Cisco IOS` `MPLS` `OSPF` `RSVP-TE` `EVE-NG` `Iperf3` `Wireshark`
 
-#### 🚧 V2X Cooperative Traffic Management in Work Zones
+#### V2X Cooperative Traffic Management in Work Zones
 **Focus:** Vehicular Networks (VANETs), ITS-G5, Simulation & Modeling
 Designed and implemented a decentralized V2X cooperative system for dynamic traffic management around road work zones, simulated using **Eclipse MOSAIC** and **SUMO**.
 * **Protocol Design:** Built custom V2X messages (`RoadWorkMsg`, `VehInfoMsg`) analogous to DENM/CAM standards, with Hop Count-based multi-hop forwarding.
@@ -86,6 +88,24 @@ Designed and implemented a decentralized V2X cooperative system for dynamic traf
 * **Dynamic Speed Policy:** Developed a zone-based progressive speed recommendation system (Far/Mid/Near) with directional filtering (`targetHeading`) to smooth traffic flow and reduce shockwaves.
 * **Evaluation:** Benchmarked across 2000/2400/2800-vehicle scenarios, measuring queue length, density, throughput, and message delivery ratio (~100%) against a no-policy baseline.
 * **Tech Stack:** `Eclipse MOSAIC` `SUMO` `Java` `ITS-G5` `V2X/VANET` `Network Simulation`
+
+#### Dynamic Network Slicing over P4/SDN
+**Focus:** Software-Defined Networking, P4 Programmability, Network Function Virtualization
+Designed and implemented a dynamic, resilient Network Slicing architecture on a P4-programmable SDN infrastructure, isolating traffic across three tiered slices (Gold/Silver/Bronze) without physical header overhead.
+* **Line-Rate Slicing:** Built a metadata-based (not shim-header) slice classification and QoS scheduling pipeline in P4, using per-slice meters to enforce SLA bandwidth limits at line-rate.
+* **Extended Data Plane (cNFs):** Offloaded Traffic Shaping to containerized Linux Network Functions using HTB queues, dynamically activated via gRPC telemetry and SIGUSR signaling when drops are detected.
+* **Self-Healing Control Plane:** Implemented autonomous fault recovery (<5s) via a table-auditing plugin that detects rule tampering/failures and force-reinjects the P4 pipeline without operator intervention.
+* **Security:** Integrated a stateful firewall using Bloom Filters to block unsolicited WAN-originated traffic at the switch level.
+* **Tech Stack:** `P4` `Python` `gRPC/P4Runtime` `Mininet` `Docker` `Linux tc/HTB` `SDN`
+
+#### Secure File Storage (SFS)
+**Focus:** Applied Cryptography, Zero-Knowledge Architecture, Full-Stack Security Engineering
+Built a privacy-first, end-to-end encrypted cloud file storage system where the server is architecturally incapable of decrypting user data, including a "Full Privacy Mode" with traffic obfuscation.
+* **Zero-Knowledge Design:** All encryption/decryption (AES-GCM via Web Crypto API) happens client-side; the backend only ever stores wrapped DEKs, encrypted metadata, and ciphertext chunks.
+* **Privacy-Hardened Uploads:** Implemented client-side file chunking, padding, shuffled chunk order, and randomized upload delays to obscure file size and transfer patterns from network observers.
+* **Auth & Access Control:** OpenID Connect (Google) + local credential auth with short-lived JWTs, rotating refresh tokens, and granular per-file sharing (public/private links, READ/WRITE permissions).
+* **Security-First CI/CD:** Automated pipeline running eslint-security, Trivy (CVE scanning), TruffleHog (secret detection), and a dedicated Vitest security suite (RBAC, encryption, isolation) gating every merge.
+* **Tech Stack:** `SvelteKit` `Express` `TypeScript` `PostgreSQL` `Prisma` `Web Crypto API` `Docker` `GitHub Actions`
 ---
 
 ### 📫 Connect with me
