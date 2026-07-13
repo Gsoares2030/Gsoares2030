@@ -78,6 +78,14 @@ Designed and validated a resilient **MPLS Core Network** topology capable of adv
 * **High Availability:** Engineered fault tolerance using Fast Reroute (FRR) and backup tunnels, ensuring zero packet loss during link failures.
 * **Tech Stack:** `Cisco IOS` `MPLS` `OSPF` `RSVP-TE` `EVE-NG` `Iperf3` `Wireshark`
 
+#### 🚧 V2X Cooperative Traffic Management in Work Zones
+**Focus:** Vehicular Networks (VANETs), ITS-G5, Simulation & Modeling
+Designed and implemented a decentralized V2X cooperative system for dynamic traffic management around road work zones, simulated using **Eclipse MOSAIC** and **SUMO**.
+* **Protocol Design:** Built custom V2X messages (`RoadWorkMsg`, `VehInfoMsg`) analogous to DENM/CAM standards, with Hop Count-based multi-hop forwarding.
+* **Multi-hop Networking:** Implemented an Advanced Forwarding (AF) scheme extending the RSU's 140m radio range to a 280m two-hop horizon, using distance-based contention timers and overhearing/cancellation to prevent broadcast storms.
+* **Dynamic Speed Policy:** Developed a zone-based progressive speed recommendation system (Far/Mid/Near) with directional filtering (`targetHeading`) to smooth traffic flow and reduce shockwaves.
+* **Evaluation:** Benchmarked across 2000/2400/2800-vehicle scenarios, measuring queue length, density, throughput, and message delivery ratio (~100%) against a no-policy baseline.
+* **Tech Stack:** `Eclipse MOSAIC` `SUMO` `Java` `ITS-G5` `V2X/VANET` `Network Simulation`
 ---
 
 ### 📫 Connect with me
