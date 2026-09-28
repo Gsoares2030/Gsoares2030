@@ -1,7 +1,7 @@
 # Hi there 👋, I'm Gonçalo Soares
 
 🎓 Master's student in **Software Engineering** at **Universidade do Minho**, Braga, Portugal  
-💻 Currently specializing in **Cybersecurity** and **Next Generation Networks** <br />
+💻 Currently specializing in **Cybersecurity** and **Next Generation Networks**  
 🌐 Primary interests: **Computer networks and cybersecurity**
 
 ---
@@ -54,7 +54,9 @@
 ### 🏆 Featured Projects
 
 #### AirTrail: Cloud-Native Flight Tracker
-**Focus:** Cloud Computing, DevOps, Scalability  
+
+**Focus:** Cloud Computing, DevOps, Scalability
+
 A full-stack web application migrated to a microservices architecture on **Google Cloud Platform (GCP)**. The system allows users to track flight history and view interactive statistics.
 
 * **Infrastructure as Code:** Provisioned GKE clusters and managed secrets using **Ansible** and **Ansible Vault**.
@@ -63,7 +65,9 @@ A full-stack web application migrated to a microservices architecture on **Googl
 * **Tech Stack:** `TypeScript` `Svelte` `Node.js` `PostgreSQL` `Docker` `Kubernetes` `Ansible` `GCP`
 
 #### Over-the-Top (OTT) Multimedia Service
-**Focus:** Network Engineering, Protocol Design, Python  
+
+**Focus:** Network Engineering, Protocol Design, Python
+
 Designed and implemented a custom **Overlay Network** to support efficient real-time multimedia streaming (video/audio) over a physical underlay network.
 
 * **Custom Protocol:** Developed an application-layer **Multicast routing protocol** with dynamic table updates based on hop metrics.
@@ -72,7 +76,9 @@ Designed and implemented a custom **Overlay Network** to support efficient real-
 * **Tech Stack:** `Python` `TCP/IP` `Socket Programming` `Multicast Routing` `Overlay Networks`
 
 #### MPLS Traffic Engineering & QoS
-**Focus:** Network Infrastructure, Routing Protocols, High Availability  
+
+**Focus:** Network Infrastructure, Routing Protocols, High Availability
+
 Designed and validated a resilient **MPLS Core Network** topology capable of advanced traffic manipulation and service differentiation.
 
 * **Traffic Engineering (TE):** Configured **RSVP-TE** tunnels with unequal load balancing (70/30 split) to optimize bandwidth utilization across the backbone.
@@ -81,8 +87,11 @@ Designed and validated a resilient **MPLS Core Network** topology capable of adv
 * **Tech Stack:** `Cisco IOS` `MPLS` `OSPF` `RSVP-TE` `EVE-NG` `Iperf3` `Wireshark`
 
 #### V2X Cooperative Traffic Management in Work Zones
+
 **Focus:** Vehicular Networks (VANETs), ITS-G5, Simulation & Modeling
+
 Designed and implemented a decentralized V2X cooperative system for dynamic traffic management around road work zones, simulated using **Eclipse MOSAIC** and **SUMO**.
+
 * **Protocol Design:** Built custom V2X messages (`RoadWorkMsg`, `VehInfoMsg`) analogous to DENM/CAM standards, with Hop Count-based multi-hop forwarding.
 * **Multi-hop Networking:** Implemented an Advanced Forwarding (AF) scheme extending the RSU's 140m radio range to a 280m two-hop horizon, using distance-based contention timers and overhearing/cancellation to prevent broadcast storms.
 * **Dynamic Speed Policy:** Developed a zone-based progressive speed recommendation system (Far/Mid/Near) with directional filtering (`targetHeading`) to smooth traffic flow and reduce shockwaves.
@@ -90,8 +99,11 @@ Designed and implemented a decentralized V2X cooperative system for dynamic traf
 * **Tech Stack:** `Eclipse MOSAIC` `SUMO` `Java` `ITS-G5` `V2X/VANET` `Network Simulation`
 
 #### Dynamic Network Slicing over P4/SDN
+
 **Focus:** Software-Defined Networking, P4 Programmability, Network Function Virtualization
+
 Designed and implemented a dynamic, resilient Network Slicing architecture on a P4-programmable SDN infrastructure, isolating traffic across three tiered slices (Gold/Silver/Bronze) without physical header overhead.
+
 * **Line-Rate Slicing:** Built a metadata-based (not shim-header) slice classification and QoS scheduling pipeline in P4, using per-slice meters to enforce SLA bandwidth limits at line-rate.
 * **Extended Data Plane (cNFs):** Offloaded Traffic Shaping to containerized Linux Network Functions using HTB queues, dynamically activated via gRPC telemetry and SIGUSR signaling when drops are detected.
 * **Self-Healing Control Plane:** Implemented autonomous fault recovery (<5s) via a table-auditing plugin that detects rule tampering/failures and force-reinjects the P4 pipeline without operator intervention.
@@ -99,13 +111,17 @@ Designed and implemented a dynamic, resilient Network Slicing architecture on a 
 * **Tech Stack:** `P4` `Python` `gRPC/P4Runtime` `Mininet` `Docker` `Linux tc/HTB` `SDN`
 
 #### Secure File Storage (SFS)
+
 **Focus:** Applied Cryptography, Zero-Knowledge Architecture, Full-Stack Security Engineering
+
 Built a privacy-first, end-to-end encrypted cloud file storage system where the server is architecturally incapable of decrypting user data, including a "Full Privacy Mode" with traffic obfuscation.
+
 * **Zero-Knowledge Design:** All encryption/decryption (AES-GCM via Web Crypto API) happens client-side; the backend only ever stores wrapped DEKs, encrypted metadata, and ciphertext chunks.
 * **Privacy-Hardened Uploads:** Implemented client-side file chunking, padding, shuffled chunk order, and randomized upload delays to obscure file size and transfer patterns from network observers.
 * **Auth & Access Control:** OpenID Connect (Google) + local credential auth with short-lived JWTs, rotating refresh tokens, and granular per-file sharing (public/private links, READ/WRITE permissions).
 * **Security-First CI/CD:** Automated pipeline running eslint-security, Trivy (CVE scanning), TruffleHog (secret detection), and a dedicated Vitest security suite (RBAC, encryption, isolation) gating every merge.
 * **Tech Stack:** `SvelteKit` `Express` `TypeScript` `PostgreSQL` `Prisma` `Web Crypto API` `Docker` `GitHub Actions`
+
 ---
 
 ### 📫 Connect with me
